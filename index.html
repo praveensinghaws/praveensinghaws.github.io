@@ -1,127 +1,493 @@
-﻿<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
 
-<html>
 <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1" />
 
-<title> Data_Analyst_Preparation </title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<style type="text/css">
+    <!-- Materialize - Compiled and minified CSS-->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css" />
+    <!-- Font Awesome Icon - CSS-->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+    <!-- Custom Styles-->
+    <link rel="stylesheet" href="/assets/css/style.css" />
 
-body {background-color:SlateBlue ;
-}
-h1 {color: white;}
-td {color: white;}
-h1 {bold;}
-h3 {white}
+    <!-- Open Graph-->
+    <meta property="og:title" content="Pavan Lalwani | Software Engineer" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://pavanlalwani.github.io/examples/preview.JPG" />
+    <meta property="og:url" content="https://pavanlalwani.github.io/" />
+    <meta property="og:description" content="Software Engineer" />
+    <meta property="og:site_name" content="Pavan Lalwani | Software Engineer" />
 
-</style>
+    <meta name="author" content="Pavan Lalwani" />
+    <meta name="description" content="Software Engineer with a passion for backend development" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="robots" content="index, follow" />
 
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png" />
+    <!-- Google Site Verification for indexing -->
+    <meta name="google-site-verification" content="n2-upcCl4DyrKGeq1_kumYPu_hQd_KDELaflYV4RB1Y" />
+
+    <title>Pavan Lalwani | Software Engineer</title>
 </head>
 
-<body> 
+<body>
+    <!-- Navigation Menu-->
+    <!-- Nav class 1 -->
+    <nav class="hide-on-small-only">
+        <ul class="side-nav fixed section table-of-contents">
+
+            <li class="logo">
+                <a id="logo-container" aria-label="Navigate to the beginning of the page" href="#intro"
+                    class="brand-logo grey-blue-text">
+                    <img src="/assets/img/profile_picture.jpg" class="circle img-responsive profile-pic" alt="avatar">
+                </a>
+            </li>
+
+            <li class="bold">
+                <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text"><i
+                        class="mdi-social-person small"></i><span>About</span></a>
+            </li>
+            <li class="bold">
+                <a aria-label="Navigate to the Experience section" href="#experience"
+                    class="waves-effect waves-dark teal-text"><i
+                        class="mdi-action-trending-up small"></i><span>Experience</span></a>
+            </li>
+
+            <!--       <li class="bold">
+        mdi-av-web small
+        mdi-av-my-library-books small
+        <a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark teal-text"><i
+          class="mdi-av-my-library-books small"></i><span>Projects</span></a>
+        </li> -->
+
+            <li class="bold">
+                <a aria-label="Navigate to the Skills section" href="#skills"
+                    class="waves-effect waves-dark teal-text"><i
+                        class="mdi-action-assessment small"></i><span>Skills</span></a>
+            </li>
+
+            <li class="bold">
+                <a aria-label="Navigate to the Education section" href="#education"
+                    class="waves-effect waves-dark teal-text"><i
+                        class="mdi-social-school small"></i><span>Education</span></a>
+            </li>
+
+            <li class="bold">
+                <a aria-label="Navigate to the Contact section" href="#contact"
+                    class="waves-effect waves-dark teal-text"><i
+                        class="mdi-content-mail small"></i><span>Contact</span></a>
+            </li>
+
+            <li class="bold">
+                <!-- <a aria-label="Open Varad's resume in a new tab" href="#resume" target="_blank"
+                  onclick="window.open('https://drive.google.com/file/d/1vYi-bMyIsZPve0x_clxY8xsDtiHiOMd3/view?usp=sharing')"
+                  class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i><span>Resume</span></a> -->
+                <!--         <a aria-label="Open Varad's resume in a new tab" href="https://varadbhogayata.github.io/assets/resume/Varad_Bhogayata_Resume.pdf" target="_blank"
+                    class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i><span>Resume</span></a>  -->
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Nav class 2 -->
+    <nav class="hide-on-large only trigger z-depth-1">
+        <a aria-label="Toggle visibility of the mobile navbar" href="#" data-activates="slide-out"
+            class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+        <div class="name-title">
+            <a id="name" aria-label="Navigate to the beginning of the page" href="#" class="teal-text">Pavan
+                Lalwani</a><span class="black-text">Software Engineer</span>
+        </div>
+    </nav>
+
+    <!-- Nav class 3 -->
+    <nav class="hide-on-large only">
+        <ul id="slide-out" class="side-nav">
+            <li class="bold">
+                <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text"><i
+                        class="mdi-social-person small"></i><span>About</span></a>
+            </li>
+            <li class="bold">
+                <a aria-label="Navigate to the Experience section" href="#experience"
+                    class="waves-effect waves-dark teal-text"><i
+                        class="mdi-action-trending-up small"></i><span>Experience</span></a>
+            </li>
+            <!--       <li class="bold">
+                        <a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark teal-text"><i
+                          class="mdi-av-my-library-books small"></i><span>Projects</span></a>
+                        </li> -->
+            <li class="bold">
+                <a aria-label="Navigate to the Skills section" href="#skills"
+                    class="waves-effect waves-dark teal-text"><i
+                        class="mdi-action-assessment small"></i><span>Skills</span></a>
+            </li>
+
+            <li class="bold">
+                <a aria-label="Navigate to the Education section" href="#education"
+                    class="waves-effect waves-dark teal-text"><i
+                        class="mdi-social-school small"></i><span>Education</span></a>
+            </li>
+            <li class="bold">
+                <a aria-label="Navigate to the Contact section" href="#contact"
+                    class="waves-effect waves-dark teal-text"><i
+                        class="mdi-content-mail small"></i><span>Contact</span></a>
+            </li>
+            <!--       <li class="bold">
+                                <a aria-label="Open Pavan's Resume in a new tab"
+                                href="https://drive.google.com/file/d/1B6MZ1z0-7NsefC3Lm_q-uhib28MTqpE9/view?usp=sharing" target="_blank"
+                                class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i><span>Resume</span></a>
+                              </li> -->
+        </ul>
+    </nav>
+
+    <!-- Main Content-->
+    <main>
+        <!-- First Section: Heading lines and image -->
+        <section id="intro" class="section scrollspy full-height">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="col-md-9">
+                    <div class="content section-padding valign" style="margin-left: 10%; margin-top: 50px;">
+                        <div class="caption">
+                            <h2>Hi, I'm <span class="teal">Pavan Lalwani.</span></h2>
+                            <h5 style="color:#fff">A <span class="typing"
+                                    style="font-weight: 300; color:#004d40"></span></h5>
+                            <!-- <h5 style="color:#00796b">A <span class="typing" style="font-weight: 300; color:#fff"></span></h5> -->
+                            <h5>Self-driven, quick starter, passionate programmer with a curious mind who enjoys solving
+                                complex and
+                                challenging real-world problems.</h5>
+                        </div>
+                        <div class="social">
+                            <a href="https://www.linkedin.com/in/pavan-lalwani/" target="_blank">
+                                <button class="icon-btn linkedin">
+                                    <i class="fa fa-linkedin"></i>
+                                </button>
+                            </a>
+                            <a href="https://github.com/pavanlalwani" target="_blank">
+                                <button class="icon-btn github">
+                                    <i class="fa fa-github"></i>
+                                </button>
+                            </a>
+                        </div>
+                        <div class='buttons'>
+                            <a href="#about" class="readme">Read More</a>
+                            <a href="#contact" class="contactme">Contact Me</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Second Section: About -->
+        <section id="about" class="section scrollspy">
+            <h3 class="page-title white-text teal">About</h3>
+            <div class="container flow-text">
+                <p>
+                    An experienced Software Engineer specializing in Backend Development and Microservices architecture,
+                    I hold a
+                    Bachelor of Engineering degree in Information Technology from the University of Pune.
+                    <br>
+                    The technology stack I have worked with involves the following:
+                <ol>
+                    <li>Java</b></li>
+                    <li>Spring framework (Spring Boot, Spring REST)</li>
+                    <li>Node.js/Express.js</li>
+                    <li>REST APIs</li>
+                    <li>SQL</li>
+                    <li>AWS</li>
+                    <li>Docker</li>
+                </ol>
+                I also have some exposure to JavaScript and its frameworks – Angular & React.
+                <br><br>
+                I am currently working as a Software Engineer at Persistent Systems, for a client in the Telecom
+                Business Unit,
+                who is a worldwide industry leader in their domain.
+                <br><br>
+                In my final year of engineering, I interned with a multinational semiconductor company, Espressif, where
+                I
+                experienced the complete software development lifecycle starting from designing, all the way to
+                deployment,
+                testing and maintenance.
+                At Espressif, I worked in a team to develop a forward Web Proxy Server from scratch, and deployed this
+                on AWS
+                EC2 instances.
+                <br> <br>
+                I am passionate about coding and love to design and develop software applications to solve complex and
+                challenging real world problems.
+                </p>
+            </div>
+        </section>
 
 
+        <!-- Third Section: Experience -->
+        <section id="experience" class="section scrollspy">
+            <h3 class="page-title white-text teal">Experience</h3>
+            <div class="container">
+
+                <!-- Latest Experience -->
+                <div class="card">
+                    <div class="card-content">
+                        <div class="row">
+                            <div class="col s12 m2">
+                                <a href="https://www.persistent.com/" target="_blank"><img alt="Persistent Logo"
+                                        src="/assets/img/persistent_logo.png" class="responsive-img center-block" /></a>
+                            </div>
+                            <!-- <div class="col s12 m10"> -->
+                            <div class="col s12 m10">
+                                <p>
+                                    <span class="card-title"><a href="https://www.persistent.com/" target="_blank"
+                                            class="teal-text hoverline">Persistent Systems</a></span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="role brown-text text-darken-2">Software Engineer</div>
+                        <ul>
+                            <li>
+                                Working with client Cisco for their product Cisco IoT Control Center, which is an
+                                industry leading SaaS
+                                platform for managing connectivity for IoT devices.
+                            </li>
+                            <li>
+                                Part of a Backend cross-functional Agile development team, I primarily work for
+                                implementation of new
+                                features
+                                and optimization of source code, developing both code and quality Unit Tests.
+                            </li>
+                            <li>Attended Persistent’s flagship Graduate Employees with Multidimensional Skills (GEMS)
+                                training program
+                                in Java
+                                and Spring Framework.
+                            </li>
+                            <br>
+                            <b>Advanced Skills: </b>Java, Spring Boot, Spring MVC, SQL, Gradle, Prometheus, Unit testing
+                            (JUnit/Mockito)
+                        </ul>
+                    </div>
+                    <div class="card-action">
+                        <span>June 2021 - Present | Pune, India</span>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div class="card-content">
+                        <div class="row">
+                            <div class="col s12 m2">
+                                <a href="https://www.espressif.com/" target="_blank"><img alt="Espressif logo"
+                                        src="/assets/img/logo-black.svg" class="responsive-img center-block" /></a>
+                            </div>
+                            <!-- <div class="col s12 m10"> -->
+                            <div class="col s12 m10">
+                                <p>
+                                    <span class="card-title"><a href="https://www.espressif.com/" target="_blank"
+                                            class="teal-text hoverline">Espressif Systems</a></span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="role brown-text text-darken-2">Software Engineering Intern</div>
+                        <ul>
+                            <li>
+                                At Espressif, under their Graduate Internship Program, I experienced the complete
+                                software development
+                                lifecycle
+                                starting from designing, all the way to deployment, testing and maintenance of software.
+                            </li>
+                            <li>
+                                Collaborated with a team of 4 to develop a multithreaded HTTP/HTTPS forward Proxy Server
+                                using local
+                                caching of
+                                pages to achieve faster load times.
+                            </li>
+                            <li>
+                                Included URL blocking and IP address specific client blocking features.
+                            </li>
+                            <li>Handled end to end deployment of the proxy server to the cloud. Tested with multiple
+                                clients to ensure
+                                SaaS like
+                                implementation.</li>
+                            <br>
+                            <b>Advanced Skills: </b>Python, Socket programming, AWS EC2, Docker, Shell Scripting
+                        </ul>
+                    </div>
+                    <div class="card-action">
+                        <span>Aug 2019 - Jun 2020 | Pune, India</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--      Fifth Section: Skills 
+    <section id="skills" class="section scrollspy">
+      <h3 class="page-title white-text teal">Skills</h3>
+      <div class="container">
+        <div class="row">
+          <div class="col s12 m6 l6">
+            <div class="card medium">
+              <div class="card-content">
+                <p>
+                  <h4>Languages</h4>
+                <ol>
+                  <li>Java</li>
+                  <li>Python</li>
+                  <li>C++</li>
+                  <li>Shell Scripting</li>
+                </ol>
+              </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>      
+      
+      <div class="container">
+        <div class="row">
+          <div class="col s12 m6 l6">
+            <div class="card medium">
+              <div class="card-content">
+                <p>
+                  <h4>Languages</h4>
+                <ol>
+                  <li>Java</li>
+                  <li>Python</li>
+                  <li>C++</li>
+                  <li>Shell Scripting</li>
+                </ol>
+              </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>      
+      
+      <div class="container">
+        <div class="row">
+          <div class="col s12 m6 l6">
+            <div class="card medium">
+              <div class="card-content">
+                <p>
+                  <h4>Languages</h4>
+                <ol>
+                  <li>Java</li>
+                  <li>Python</li>
+                  <li>C++</li>
+                  <li>Shell Scripting</li>
+                </ol>
+              </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+        <!-- Seventh Section: Education -->
+        <section id="education" class="section scrollspy">
+            <h3 class="page-title white-text teal">Education</h3>
+            <div class="container">
+                <div class="row">
+                    <!-- Education -->
+                    <div class="col s12 m6 l6">
+                        <div class="card">
+                            <div class="card-content">
+                                <p>
+                                    <span class="card-title"><a href="https://www.asu.edu/" target="_blank"
+                                            class="teal-text hoverline">Pune INstitute of Computer Technology</a></span>
+                                </p>
+                                <p class="brown-text">Affiliated to SPPU</p>
+                                <br>
+                                <p>
+                                    <b>Degree: </b>Bachelor of Engineering - BE in Information Technology
+                                    <br>
+                                    <b>CGPA: </b>CGPA 8.94/10 (First Class with Distinction)
+                                </p>
+
+                                <ul>
+                                    <p>
+                                        <b>Major Courses:</b>
+                                    <ul>
+                                        <li>Data Structures and Algorithms</li>
+                                        <li>Operating Systems</li>
+                                        <li>Databases</li>
+                                        <li>Computer Networking</li>
+                                        <li>Object Oriented Programming</li>
+                                    </ul>
+                                    </p>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+        </section>
+
+
+        <!-- Eight Section: Contact -->
+        <section id="contact" class="section scrollspy full-height">
+            <h3 class="page-title white-text teal">Contact</h3>
+            <div class="container">
+                <p>
+                    <a aria-label="Call Pavan" data-position="top" data-tooltip="Call Pavan"
+                        class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                            class="fa fa-phone"></i><a aria-label="Call Pavan">+919503735670</a></a>
+                </p>
+                <p>
+                    <a aria-label="Email Pavan" href="mailto:pavanlalwani9@gmail.com" target="_blank"
+                        data-position="top" data-tooltip="Email Pavan"
+                        class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                            class="fa fa-envelope"></i><a aria-label="Email Pavan" href="mailto:pavanlalwani9@gmail.com"
+                            class="hoverline">pavanlalwani9@gmail.com</a></a>
+                </p>
+                <p>
+                    <a aria-label="View Pavan on GitHub" href="https://github.com/pavanlalwani" target="_blank"
+                        data-position="top" data-tooltip="View Pavan on GitHub"
+                        class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                            class="fa fa-github"></i><a aria-label="Pavan on Github"
+                            href="https://github.com/pavanlalwani" class="hoverline"
+                            target="_blank">github.com/pavanlalwani</a></a>
+                </p>
+                <p>
+                    <a aria-label="View Pavan on LinkedIn" href="https://www.linkedin.com/in/pavan-lalwani/"
+                        target="_blank" data-position="top" data-tooltip="View Pavan on LinkedIn"
+                        class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                            class="fa fa-linkedin"></i><a aria-label="Pavan on LinkedIn"
+                            href="https://www.linkedin.com/in/pavan-lalwani/" class="hoverline"
+                            target="_blank">linkedin.com/in/pavan-lalwani</a></a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- typed.js -->
+    <script src="assets/vendor/typed.js/typed.min.js"></script>
+    <script type="text/javascript">
+        var typed = new Typed('.typing', {
+            strings: ["Software Engineer", "Problem Solver", "Clean Coder"],
+            loop: true,
+            typeSpeed: 20,
+            backSpeed: 40
+        });
+    </script>
+
+
+    <!-- jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+    <!-- Materialize - Compiled and minified JavaScript-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
+    <script>
+        // Materialize - Initializers
+        $(document).ready(function () {
+            $(".scrollspy").scrollSpy()
+            // Initialize collapse button
+            $(".button-collapse").sideNav({
+                menuWidth: 190, // Default is 240
+                edge: "left", // Choose the horizontal origin
+                closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+            })
+        })
+    </script>
 </body>
 
-
-<table  align="center"  border="2" cellpadding="11" cellspacing="10">
-
-<tr>
-<th colspan="5"> <h1> <marquee width = "85%">Data_Analyst_Preparation Praveen Kumar Singh Lucknow Uttar Pradesh, Email. praveensingh.dsm@live.com   </marquee> </h1> </th>
-</tr>
-
-<! Week 1 and 2: Excel and Statistics>
-
-<tr>
-<td><a href="https://www.vertex42.com/ExcelTemplates/budgets.html" target="New" style="text-decoration:none; color: white;"> BUDGET PLANNER(CODEBASICS) </td>
-<td><a href="https://www.youtube.com/channel/UC8uU_wruBMHeeRma49dtZKA" target="New" style="text-decoration:none; color: white;"> CHANDOO'S YOUTUBE CHANNEL(CODEBASICS) </td>
-<td><a href="https://chandoo.org/" target="New" style="text-decoration:none; color: white;"> CHANDOO'S WEBSITE(CODEBASICS) </td>
-
-</tr>
-
-<tr>
-<td><a href="https://www.youtube.com/watch?v=11unm2hmvOQ&list=PLZoTAELRMXVMgtxAboeAx-D9qbnY94Yay" target="New" style="text-decoration:none; color: white;"> LIVE STATISTICS PLAYLIST(KRISH NAIK) </td>
-<td><a href="https://www.youtube.com/watch?v=uzDO-wnDY7w&list=PLPbgcxheSpE3Aba8g3hVxl0gcocgQpLoA" target="New" style="text-decoration:none; color: white;"> MATHEMATICS, STATISTICS FOR DATA SCIENCE AND MACHINE LEARNING(CODEBASICS) </td>
-<td><a href="https://www.youtube.com/watch?v=innk6tpRCW0" target="New" style="text-decoration:none; color: white;"> MATHEMATICS, STATISTICS (GREAT LEARNING) </td>
-
-</tr>
-
-
-
-<!Week 3, 4, 5: BI tools>
-
-<tr>
-<td><a href="https://codebasics.io/courses/power-bi-data-analysis-with-end-to-end-project" target="New" style="text-decoration:none; color: white;">MY POWER BI COURSE THAT CAN MAKE YOU JOB READY(CODEBASICS) </td>
-<td><a href="https://www.youtube.com/playlist?list=PLeo1K3hjS3uva8pk1FI3iK9kCOKQdz1I9" target="New" style="text-decoration:none; color: white;"> CODEBASICS SALES INSIGHTS PROJECT: (CODEBASICS) </td>
-<td><a href="https://www.youtube.com/watch?v=pqSoCa2NGj4" target="New" style="text-decoration:none; color: white;"> PERSONAL FINANCE PROJECT(CODEBASICS) </td>
-
-</tr>
-
-
-
-<!Week 6 and 7: Python>
-
-<tr>
-<td><a href="https://codebasics.io/courses/python-for-beginner-and-intermediate-learners" target="New" style="text-decoration:none; color: white;"> PYTHON COURSE(CODEBASICS) </td>
-<td> <a href="https://www.youtube.com/playlist?list=PLeo1K3hjS3uv5U-Lmlnucd7gqF-3ehIh0" target="New" style="text-decoration:none; color: white;">CODEBASICS PYTHON TUTORIALS (FIRST 16)(CODEBASICS)
-<td><a href="https://www.youtube.com/playlist?list=PLPbgcxheSpE1DJKfdko58_AIZRIT0TjpO" target="New" style="text-decoration:none; color: white;"> CODEBASICS PYTHON HINDI TUTORIALS(CODEBASICS)</td>
-</tr>
-
-<!Week 8, 9: Numpy, Pandas, Data Visualization Libraries>
-
-<tr>
-<td> <a href="https://github.com/codebasics/py/tree/master/Basics/Hindi" target="New" style="text-decoration:none; color: white;">MAKE SURE TO WORK ON EXERCISES(CODEBASICS) </td>
-<td><a href="https://codebasics.io/courses/python-for-beginner-and-intermediate-learners" target="New" style="text-decoration:none; color: white;"> PYTHON NUMPY(CODEBASICS) </td>
-<td><a href="https://www.youtube.com/playlist?list=PLeo1K3hjS3uuASpe-1LjfG5f14Bnozjwy" target="New" style="text-decoration:none; color: white;"> CODEBASICS PANDAS PLAYLIST (FIRST 9)(CODEBASICS) </td>
-</tr>
-
-
-<tr>
-<td><a href="https://www.youtube.com/playlist?list=PL93zkmpfa3gVcFXZKVG9eRRT_V1vtR2EF" target="New" style="text-decoration:none; color: white;"> MATPLOTLIB(CODEBASICS) </td>
-<td><a href="https://www.youtube.com/playlist?list=PLJIOr9Je9wzHT-ptgfelpt2Nyx4VGX_j9" target="New" style="text-decoration:none; color: white;"> SEABORN(CODEBASICS) </td>
-<td><a href="https://www.kaggle.com/code" target="New" style="text-decoration:none; color: white;"> CAGGLE-NOTEBOOKS (CODEBASICS) </td>
-</tr>
-
-<tr>
-<td><a href="https://www.kaggle.com/code" target="New" style="text-decoration:none; color: white;"> CAGGLE-DATASETS(CODEBASICS) </td>
-<td><a href="https://www.youtube.com/playlist?list=PLeo1K3hjS3uuvuAXhYjV2lMEShq2UYSwX" target="New" style="text-decoration:none; color: white;"> NLP TUTORIAL PLAYLIST PYTHON(CODEBASICS) </td>
-<td><a href="https://www.youtube.com/playlist?list=PL93zkmpfa3gVcFXZKVG9eRRT_V1vtR2EF" target="New" style="text-decoration:none; color: white;"> PYTHON(AJAY PARMAR) </td>
-</tr>
-
-<!Week 10, 11, 12: SQL & MongoDB>
-
-<tr>
-<td> <a href="https://codebasics.io/courses/sql-beginner-to-advanced-for-data-professionals" target="New" style="text-decoration:none; color: white;">CHECK MY AFFORDABLE AND LATEST SQL COURSE(CODEBASICS) </td>
-<td><a href="https://www.youtube.com/playlist?list=PL08903FB7ACA1C2FB" target="New" style="text-decoration:none; color: white;"> KUDAVENKAT PLAYLIST (FIRST 16)(CODEBASICS) </td>
-<td><a href="https://www.khanacademy.org/computing/computer-programming/sql" target="New" style="text-decoration:none; color: white;"> KHANACADEMY SQL COURSE(CODEBASICS) </td>
-</tr>
-
-
-<tr>
-<td> <a href="https://www.coursera.org/learn/introduction-mongodb" target="New" style="text-decoration:none; color: white;">COURSERA(CODEBASICS) </td>
-<td><a href="https://www.youtube.com/playlist?list=PLwGdqUZWnOp1P9xSsJg7g3AY0CUjs-WOa" target="New" style="text-decoration:none; color: white;">MONGODB TUTORIAL IN HINDI IN 2020(THAPA TECHNICAL) </td>
-<td><a href="https://www.youtube.com/watch?v=oSIv-E60NiU" target="New" style="text-decoration:none; color: white;"> MONGODB TUTORIAL FOR BEGINNERS(CWH) </td>
-</tr>
-
-<!Soft skills>
-<tr>
-<td> <a href="https://www.youtube.com/watch?v=yZFrSDjRvjk" target="New" style="text-decoration:none; color: white;">LEARN ANYTHING EFFECTIVELY (CODEBASICS) </td>
-<td><a href="https://discord.com/invite/r42Kbuk" target="New" style="text-decoration:none; color: white;">CODEBASICS DISCORD SERVER:(CODEBASICS) </td>
-<!Books and other resources>
-<td><a href="http://greenteapress.com/thinkstats/thinkstats.pdf" target="New" style="text-decoration:none; color: white;"> FREE BOOK ON STATISTICS(CODEBASICS) </td>
-</tr>
-
-
-<tr>
-<td><a href="https://youtu.be/34-RThWWRHM https://www.youtube.com/watch?" target="New" style="text-decoration:none; color: white;"> MECHANICAL ENGINEER TO DATA ANALYST TRANSITION SUCCESS STORIES(CODEBASICS) </td>
-<td><a href="https://youtu.be/lqEzYDuTnvU" target="New" style="text-decoration:none; color: white;"> BCOM TO DATA ANALYST TRANSITION SUCCESS STORY (CODEBASICS) </td>
-<!Resume Guidance>
-<td><a href=https://www.youtube.com/watch?v=YKPFQUvckU0" target="New" style="text-decoration:none; color: white;"> DATA ANALYST RESUME REVIEW SESSION WITH TEMPLATE RESUME(CODEBASICS) </td>
-</tr>
-
-</table>
-
-</body>
 </html>
-
-
