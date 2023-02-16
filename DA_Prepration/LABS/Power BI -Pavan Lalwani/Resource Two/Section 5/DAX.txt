@@ -1,0 +1,9 @@
+
+
+TopN = TOPN(10,Logical1Data, CALCULATE(SUM(Logical1Data[Profit])))
+
+Top10 = TOPN(10, VALUES(DATA[Product Name]),CALCULATE(SUM(DATA[Profit]))).
+
+
+Top2 = TOPN(2,
+SUMMARIZE(Logical1Data, Logical1Data[Customer Name],"Profit",SUM(Logical1Data[Profit])))

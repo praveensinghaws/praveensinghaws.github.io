@@ -1,0 +1,25 @@
+git remote add origin git@github.com:praveensinghdsm/branch_topic.git
+git clone <Repo url> 
+git clone <Repo url> . (repo will copy to own Directory)
+git status
+git add . (Stages new and modified, without deleted)
+git add -A (Stages All)
+git add u (Stages new and modified, without new)
+git commit -m "First Commit"
+git push -u origin master
+git pull
+git diff git diff --staged <filename>(see changes) 
+git restore <filename> (restore changes form files)
+git reset README.md (undo local changes to the state of a Git repo)
+git checkout . (record all new commits on that branch)
+git checkout README.md (record all new commits on that files)
+git branch (check branch)
+git branch login-system (Create new branch)
+git check login-system (set new branch as default) 
+git push origin login-system (pust to new branch)
+git checkout main (set main branch)
+git merge login-system (merge data from new brach to main branch)
+git branch -d login-system (Delete Branch from Local)
+git push origin --delete login-system (Delete Branch from Remote/Github)
+
+
