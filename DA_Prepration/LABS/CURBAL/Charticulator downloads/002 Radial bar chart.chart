@@ -1,0 +1,916 @@
+{
+  "state": {
+    "version": "1.4.0",
+    "dataset": {
+      "name": "windows_version-clean - Dec 2019y",
+      "tables": [
+        {
+          "name": "windows_version-clean - Dec 2019y",
+          "displayName": "windows_version-clean - Dec 2019y",
+          "columns": [
+            {
+              "name": "Versions",
+              "type": "string",
+              "metadata": {
+                "kind": "categorical",
+                "orderMode": "alphabetically"
+              }
+            },
+            {
+              "name": "Year",
+              "type": "string",
+              "metadata": {
+                "unit": "__year",
+                "kind": "ordinal",
+                "orderMode": "alphabetically"
+              }
+            },
+            {
+              "name": "Month Name",
+              "type": "string",
+              "metadata": {
+                "kind": "ordinal",
+                "order": [
+                  "Jan",
+                  "Feb",
+                  "Mar",
+                  "Apr",
+                  "May",
+                  "Jun",
+                  "Jul",
+                  "Aug",
+                  "Sep",
+                  "Oct",
+                  "Nov",
+                  "Dec"
+                ],
+                "unit": "__month"
+              }
+            },
+            {
+              "name": "Market Share",
+              "type": "number",
+              "metadata": {
+                "kind": "numerical"
+              }
+            }
+          ],
+          "rows": [
+            {
+              "_id": "0",
+              "Versions": "10",
+              "Year": "2019",
+              "Month Name": "Dec",
+              "Market Share": 65.4
+            },
+            {
+              "_id": "1",
+              "Versions": "7",
+              "Year": "2019",
+              "Month Name": "Dec",
+              "Market Share": 26.79
+            },
+            {
+              "_id": "2",
+              "Versions": "8.x",
+              "Year": "2019",
+              "Month Name": "Dec",
+              "Market Share": 6.16
+            },
+            {
+              "_id": "3",
+              "Versions": "XP",
+              "Year": "2019",
+              "Month Name": "Dec",
+              "Market Share": 1.29
+            },
+            {
+              "_id": "4",
+              "Versions": "Vista",
+              "Year": "2019",
+              "Month Name": "Dec",
+              "Market Share": 0.31
+            },
+            {
+              "_id": "5",
+              "Versions": "Other",
+              "Year": "2019",
+              "Month Name": "Dec",
+              "Market Share": 0.06
+            }
+          ]
+        }
+      ]
+    },
+    "chart": {
+      "_id": "bsmohlc30j9",
+      "classID": "chart.rectangle",
+      "properties": {
+        "name": "Chart",
+        "backgroundColor": null,
+        "backgroundOpacity": 1
+      },
+      "mappings": {
+        "marginTop": {
+          "type": "value",
+          "value": 80
+        },
+        "marginRight": {
+          "type": "value",
+          "value": 100
+        }
+      },
+      "glyphs": [
+        {
+          "_id": "yxqcs7j06o",
+          "classID": "glyph.rectangle",
+          "properties": {
+            "name": "Glyph"
+          },
+          "table": "windows_version-clean - Dec 2019y",
+          "marks": [
+            {
+              "_id": "bjlm68cjv5n",
+              "classID": "mark.anchor",
+              "properties": {
+                "name": "Anchor"
+              },
+              "mappings": {
+                "x": {
+                  "type": "parent",
+                  "parentAttribute": "icx"
+                },
+                "y": {
+                  "type": "parent",
+                  "parentAttribute": "icy"
+                }
+              }
+            },
+            {
+              "_id": "t6ax4puhwfs",
+              "classID": "mark.rect",
+              "properties": {
+                "visible": true,
+                "shape": "rectangle",
+                "name": "Shape1"
+              },
+              "mappings": {
+                "fill": {
+                  "type": "scale",
+                  "table": "windows_version-clean - Dec 2019y",
+                  "expression": "first(Versions)",
+                  "valueType": "string",
+                  "scale": "k6qvcw5idb"
+                },
+                "strokeWidth": {
+                  "type": "value",
+                  "value": 1
+                },
+                "opacity": {
+                  "type": "value",
+                  "value": 1
+                },
+                "visible": {
+                  "type": "value",
+                  "value": true
+                },
+                "x1": {
+                  "type": "parent",
+                  "parentAttribute": "ix1"
+                },
+                "y1": {
+                  "type": "parent",
+                  "parentAttribute": "iy1"
+                },
+                "x2": {
+                  "type": "parent",
+                  "parentAttribute": "ix2"
+                },
+                "y2": {
+                  "type": "parent",
+                  "parentAttribute": "iy2"
+                },
+                "width": {
+                  "type": "scale",
+                  "table": "windows_version-clean - Dec 2019y",
+                  "expression": "avg(`Market Share`)",
+                  "valueType": "number",
+                  "scale": "0aqost2pmyqq"
+                }
+              }
+            },
+            {
+              "_id": "iplp6pxq6qm",
+              "classID": "mark.text",
+              "properties": {
+                "alignment": {
+                  "x": "right",
+                  "y": "middle",
+                  "xMargin": 5.092751879924158,
+                  "yMargin": 5
+                },
+                "rotation": 0,
+                "visible": true,
+                "name": "Text2"
+              },
+              "mappings": {
+                "text": {
+                  "type": "text",
+                  "table": "windows_version-clean - Dec 2019y",
+                  "textExpression": "Win ${first(Versions)}: ${avg(`Market Share`)}{.1f}%"
+                },
+                "fontFamily": {
+                  "type": "value",
+                  "value": "Helvetica"
+                },
+                "fontSize": {
+                  "type": "value",
+                  "value": 12
+                },
+                "color": {
+                  "type": "scale",
+                  "table": "windows_version-clean - Dec 2019y",
+                  "expression": "first(Versions)",
+                  "valueType": "string",
+                  "scale": "k6qvcw5idb"
+                },
+                "opacity": {
+                  "type": "value",
+                  "value": 1
+                },
+                "visible": {
+                  "type": "value",
+                  "value": true
+                },
+                "x": {
+                  "type": "parent",
+                  "parentAttribute": "ix1"
+                },
+                "y": {
+                  "type": "parent",
+                  "parentAttribute": "icy"
+                }
+              }
+            }
+          ],
+          "mappings": {},
+          "constraints": []
+        }
+      ],
+      "elements": [
+        {
+          "_id": "4iucgibk27u",
+          "classID": "plot-segment.polar",
+          "glyph": "yxqcs7j06o",
+          "table": "windows_version-clean - Dec 2019y",
+          "filter": null,
+          "mappings": {
+            "x1": {
+              "type": "parent",
+              "parentAttribute": "x1"
+            },
+            "x2": {
+              "type": "parent",
+              "parentAttribute": "x2"
+            },
+            "y1": {
+              "type": "parent",
+              "parentAttribute": "y1"
+            },
+            "y2": {
+              "type": "parent",
+              "parentAttribute": "y2"
+            }
+          },
+          "properties": {
+            "name": "PlotSegment1",
+            "visible": true,
+            "sublayout": {
+              "type": "dodge-y",
+              "order": null,
+              "ratioX": 0.1,
+              "ratioY": 0.1,
+              "align": {
+                "x": "start",
+                "y": "start"
+              },
+              "grid": {
+                "direction": "x",
+                "xCount": null,
+                "yCount": null
+              },
+              "orderReversed": true
+            },
+            "marginX1": 0,
+            "marginY1": 0,
+            "marginX2": 0,
+            "marginY2": 0,
+            "startAngle": 0,
+            "endAngle": 270,
+            "innerRatio": 0.08330913935210528,
+            "outerRatio": 0.9,
+            "curve": [
+              [
+                {
+                  "x": -1,
+                  "y": 0
+                },
+                {
+                  "x": -0.25,
+                  "y": -0.5
+                },
+                {
+                  "x": 0.25,
+                  "y": 0.5
+                },
+                {
+                  "x": 1,
+                  "y": 0
+                }
+              ]
+            ],
+            "normalStart": -0.2,
+            "normalEnd": 0.2
+          }
+        },
+        {
+          "_id": "p35cpjdsn4d",
+          "classID": "mark.text",
+          "properties": {
+            "name": "Title",
+            "visible": true,
+            "alignment": {
+              "x": "middle",
+              "y": "top",
+              "xMargin": 0,
+              "yMargin": 30
+            },
+            "rotation": 0
+          },
+          "mappings": {
+            "x": {
+              "type": "parent",
+              "parentAttribute": "cx"
+            },
+            "y": {
+              "type": "parent",
+              "parentAttribute": "oy2"
+            },
+            "text": {
+              "type": "value",
+              "value": "Win versions Market share Dec 2019"
+            },
+            "fontSize": {
+              "type": "value",
+              "value": 24
+            },
+            "color": {
+              "type": "value",
+              "value": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              }
+            }
+          }
+        }
+      ],
+      "scales": [
+        {
+          "_id": "0aqost2pmyqq",
+          "classID": "scale.linear<number,number>",
+          "properties": {
+            "name": "Scale1",
+            "domainMin": 0,
+            "domainMax": 70
+          },
+          "mappings": {
+            "rangeMin": {
+              "type": "value",
+              "value": 0
+            }
+          },
+          "inputType": "number",
+          "outputType": "number"
+        },
+        {
+          "_id": "k6qvcw5idb",
+          "classID": "scale.categorical<string,color>",
+          "properties": {
+            "name": "Scale2",
+            "mapping": {
+              "7": {
+                "r": 31,
+                "g": 120,
+                "b": 180
+              },
+              "10": {
+                "r": 166,
+                "g": 206,
+                "b": 227
+              },
+              "8.x": {
+                "r": 178,
+                "g": 223,
+                "b": 138
+              },
+              "XP": {
+                "r": 51,
+                "g": 160,
+                "b": 44
+              },
+              "Vista": {
+                "r": 251,
+                "g": 154,
+                "b": 153
+              },
+              "Other": {
+                "r": 227,
+                "g": 26,
+                "b": 28
+              }
+            }
+          },
+          "mappings": {},
+          "inputType": "string",
+          "outputType": "color"
+        }
+      ],
+      "constraints": [],
+      "resources": []
+    },
+    "chartState": {
+      "elements": [
+        {
+          "attributes": {
+            "angle1": 0,
+            "angle2": 270,
+            "radial1": 19.57764774774474,
+            "radial2": 211.5,
+            "x1": -400,
+            "x2": 350,
+            "y1": -250,
+            "y2": 220,
+            "x": -100,
+            "y": 100,
+            "gapX": 4,
+            "gapY": 4
+          },
+          "dataRowIndices": [
+            [
+              0
+            ],
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ],
+            [
+              4
+            ],
+            [
+              5
+            ]
+          ],
+          "glyphs": [
+            {
+              "marks": [
+                {
+                  "attributes": {
+                    "x": 0,
+                    "y": 0
+                  }
+                },
+                {
+                  "attributes": {
+                    "x1": -135.000000529857,
+                    "y1": -14.394176418919143,
+                    "x2": 135.000000529857,
+                    "y2": 14.394176418919143,
+                    "cx": 0,
+                    "cy": 0,
+                    "width": 270.000001059714,
+                    "height": 28.788352837838286,
+                    "stroke": null,
+                    "fill": {
+                      "r": 166,
+                      "g": 206,
+                      "b": 227
+                    },
+                    "strokeWidth": 1,
+                    "opacity": 1,
+                    "visible": true
+                  }
+                },
+                {
+                  "attributes": {
+                    "x": -135.000000529857,
+                    "y": 0,
+                    "text": "Win 10: 65.4%",
+                    "fontFamily": "Helvetica",
+                    "fontSize": 12,
+                    "color": {
+                      "r": 166,
+                      "g": 206,
+                      "b": 227
+                    },
+                    "visible": true,
+                    "outline": null,
+                    "opacity": 1
+                  }
+                }
+              ],
+              "attributes": {
+                "x": 135.000000529857,
+                "y": 197.10582358108087,
+                "width": 270.000001059714,
+                "height": 28.788352837838286,
+                "x1": 0,
+                "y1": 182.71164716216168,
+                "x2": 270.000001059714,
+                "y2": 211.5,
+                "ix1": -135.000000529857,
+                "iy1": -14.394176418919143,
+                "ix2": 135.000000529857,
+                "iy2": 14.394176418919143,
+                "icx": 0,
+                "icy": 0
+              }
+            },
+            {
+              "marks": [
+                {
+                  "attributes": {
+                    "x": 0,
+                    "y": 0
+                  }
+                },
+                {
+                  "attributes": {
+                    "x1": -55.30045893264325,
+                    "y1": -14.394176418919143,
+                    "x2": 55.30045893264325,
+                    "y2": 14.394176418919143,
+                    "cx": 0,
+                    "cy": 0,
+                    "width": 110.6009178652865,
+                    "height": 28.788352837838286,
+                    "stroke": null,
+                    "fill": {
+                      "r": 31,
+                      "g": 120,
+                      "b": 180
+                    },
+                    "strokeWidth": 1,
+                    "opacity": 1,
+                    "visible": true
+                  }
+                },
+                {
+                  "attributes": {
+                    "x": -55.30045893264325,
+                    "y": 0,
+                    "text": "Win 7: 26.8%",
+                    "fontFamily": "Helvetica",
+                    "fontSize": 12,
+                    "color": {
+                      "r": 31,
+                      "g": 120,
+                      "b": 180
+                    },
+                    "visible": true,
+                    "outline": null,
+                    "opacity": 1
+                  }
+                }
+              ],
+              "attributes": {
+                "x": 55.30045893264325,
+                "y": 164.47902369819747,
+                "width": 110.6009178652865,
+                "height": 28.788352837838286,
+                "x1": 0,
+                "y1": 150.0848472792783,
+                "x2": 110.6009178652865,
+                "y2": 178.8732001171166,
+                "ix1": -55.30045893264325,
+                "iy1": -14.394176418919143,
+                "ix2": 55.30045893264325,
+                "iy2": 14.394176418919143,
+                "icx": 0,
+                "icy": 0
+              }
+            },
+            {
+              "marks": [
+                {
+                  "attributes": {
+                    "x": 0,
+                    "y": 0
+                  }
+                },
+                {
+                  "attributes": {
+                    "x1": -12.71559638018225,
+                    "y1": -14.394176418919143,
+                    "x2": 12.71559638018225,
+                    "y2": 14.394176418919143,
+                    "cx": 0,
+                    "cy": 0,
+                    "width": 25.4311927603645,
+                    "height": 28.788352837838286,
+                    "stroke": null,
+                    "fill": {
+                      "r": 178,
+                      "g": 223,
+                      "b": 138
+                    },
+                    "strokeWidth": 1,
+                    "opacity": 1,
+                    "visible": true
+                  }
+                },
+                {
+                  "attributes": {
+                    "x": -12.71559638018225,
+                    "y": 0,
+                    "text": "Win 8.x: 6.2%",
+                    "fontFamily": "Helvetica",
+                    "fontSize": 12,
+                    "color": {
+                      "r": 178,
+                      "g": 223,
+                      "b": 138
+                    },
+                    "visible": true,
+                    "outline": null,
+                    "opacity": 1
+                  }
+                }
+              ],
+              "attributes": {
+                "x": 12.71559638018225,
+                "y": 131.85222381531406,
+                "width": 25.4311927603645,
+                "height": 28.788352837838286,
+                "x1": 0,
+                "y1": 117.45804739639492,
+                "x2": 25.4311927603645,
+                "y2": 146.2464002342332,
+                "ix1": -12.71559638018225,
+                "iy1": -14.394176418919143,
+                "ix2": 12.71559638018225,
+                "iy2": 14.394176418919143,
+                "icx": 0,
+                "icy": 0
+              }
+            },
+            {
+              "marks": [
+                {
+                  "attributes": {
+                    "x": 0,
+                    "y": 0
+                  }
+                },
+                {
+                  "attributes": {
+                    "x1": -2.662844047148555,
+                    "y1": -14.394176418919143,
+                    "x2": 2.662844047148555,
+                    "y2": 14.394176418919143,
+                    "cx": 0,
+                    "cy": 0,
+                    "width": 5.32568809429711,
+                    "height": 28.788352837838286,
+                    "stroke": null,
+                    "fill": {
+                      "r": 51,
+                      "g": 160,
+                      "b": 44
+                    },
+                    "strokeWidth": 1,
+                    "opacity": 1,
+                    "visible": true
+                  }
+                },
+                {
+                  "attributes": {
+                    "x": -2.662844047148555,
+                    "y": 0,
+                    "text": "Win XP: 1.3%",
+                    "fontFamily": "Helvetica",
+                    "fontSize": 12,
+                    "color": {
+                      "r": 51,
+                      "g": 160,
+                      "b": 44
+                    },
+                    "visible": true,
+                    "outline": null,
+                    "opacity": 1
+                  }
+                }
+              ],
+              "attributes": {
+                "x": 2.662844047148555,
+                "y": 99.22542393243066,
+                "width": 5.32568809429711,
+                "height": 28.788352837838286,
+                "x1": 0,
+                "y1": 84.83124751351153,
+                "x2": 5.32568809429711,
+                "y2": 113.61960035134982,
+                "ix1": -2.662844047148555,
+                "iy1": -14.394176418919143,
+                "ix2": 2.662844047148555,
+                "iy2": 14.394176418919143,
+                "icx": 0,
+                "icy": 0
+              }
+            },
+            {
+              "marks": [
+                {
+                  "attributes": {
+                    "x": 0,
+                    "y": 0
+                  }
+                },
+                {
+                  "attributes": {
+                    "x1": -0.6399082593922885,
+                    "y1": -14.394176418919143,
+                    "x2": 0.6399082593922885,
+                    "y2": 14.394176418919143,
+                    "cx": 0,
+                    "cy": 0,
+                    "width": 1.279816518784577,
+                    "height": 28.788352837838286,
+                    "stroke": null,
+                    "fill": {
+                      "r": 251,
+                      "g": 154,
+                      "b": 153
+                    },
+                    "strokeWidth": 1,
+                    "opacity": 1,
+                    "visible": true
+                  }
+                },
+                {
+                  "attributes": {
+                    "x": -0.6399082593922885,
+                    "y": 0,
+                    "text": "Win Vista: 0.3%",
+                    "fontFamily": "Helvetica",
+                    "fontSize": 12,
+                    "color": {
+                      "r": 251,
+                      "g": 154,
+                      "b": 153
+                    },
+                    "visible": true,
+                    "outline": null,
+                    "opacity": 1
+                  }
+                }
+              ],
+              "attributes": {
+                "x": 0.6399082593922885,
+                "y": 66.59862404954728,
+                "width": 1.279816518784577,
+                "height": 28.788352837838286,
+                "x1": 0,
+                "y1": 52.20444763062814,
+                "x2": 1.279816518784577,
+                "y2": 80.99280046846641,
+                "ix1": -0.6399082593922885,
+                "iy1": -14.394176418919143,
+                "ix2": 0.6399082593922885,
+                "iy2": 14.394176418919143,
+                "icx": 0,
+                "icy": 0
+              }
+            },
+            {
+              "marks": [
+                {
+                  "attributes": {
+                    "x": 0,
+                    "y": 0
+                  }
+                },
+                {
+                  "attributes": {
+                    "x1": -0.12385321149528163,
+                    "y1": -14.394176418919143,
+                    "x2": 0.12385321149528163,
+                    "y2": 14.394176418919143,
+                    "cx": 0,
+                    "cy": 0,
+                    "width": 0.24770642299056325,
+                    "height": 28.788352837838286,
+                    "stroke": null,
+                    "fill": {
+                      "r": 227,
+                      "g": 26,
+                      "b": 28
+                    },
+                    "strokeWidth": 1,
+                    "opacity": 1,
+                    "visible": true
+                  }
+                },
+                {
+                  "attributes": {
+                    "x": -0.12385321149528163,
+                    "y": 0,
+                    "text": "Win Other: 0.1%",
+                    "fontFamily": "Helvetica",
+                    "fontSize": 12,
+                    "color": {
+                      "r": 227,
+                      "g": 26,
+                      "b": 28
+                    },
+                    "visible": true,
+                    "outline": null,
+                    "opacity": 1
+                  }
+                }
+              ],
+              "attributes": {
+                "x": 0.12385321149528163,
+                "y": 33.971824166663886,
+                "width": 0.24770642299056325,
+                "height": 28.788352837838286,
+                "x1": 0,
+                "y1": 19.57764774774474,
+                "x2": 0.24770642299056325,
+                "y2": 48.36600058558302,
+                "ix1": -0.12385321149528163,
+                "iy1": -14.394176418919143,
+                "ix2": 0.12385321149528163,
+                "iy2": 14.394176418919143,
+                "icx": 0,
+                "icy": 0
+              }
+            }
+          ]
+        },
+        {
+          "attributes": {
+            "x": -25,
+            "y": 300,
+            "text": "Win versions Market share Dec 2019",
+            "fontFamily": "Arial",
+            "fontSize": 24,
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0
+            },
+            "visible": true,
+            "outline": null,
+            "opacity": 1
+          }
+        }
+      ],
+      "scales": [
+        {
+          "attributes": {
+            "rangeMin": 0,
+            "rangeMax": 288.9908268223238
+          }
+        },
+        {
+          "attributes": {}
+        }
+      ],
+      "attributes": {
+        "width": 900,
+        "height": 600,
+        "marginLeft": 50,
+        "marginRight": 100,
+        "marginTop": 80,
+        "marginBottom": 50,
+        "cx": -25,
+        "cy": -15,
+        "x1": -400,
+        "y1": -250,
+        "x2": 350,
+        "y2": 220,
+        "ox1": -450,
+        "oy1": -300,
+        "ox2": 450,
+        "oy2": 300
+      }
+    }
+  },
+  "name": "radial bar chart"
+}

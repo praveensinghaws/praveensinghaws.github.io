@@ -1,0 +1,39 @@
+let
+
+    Source = List.Dates,
+    #"Invoke function" = Source(#date(2019, 01, 01), Duration.Days(DateTime.Date(DateTime.FixedLocalNow())- #date(2019, 01, 01))+1, #duration(1, 0, 0, 0)),
+  
+    #"List to table" = Table.FromList(#"Invoke function", Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+    
+    Date = Table.RenameColumns(#"List to table",{{"Column1", "Date"}}),
+ 
+    #"Day Added" = Table.AddColumn(Date, "DayNo", each Text.PadStart(Number.ToText(Date.Day([Date])),2,"0")),
+  
+    #"Day Name Added" = Table.AddColumn(#"Day Added", "Day Name", each Date.ToText([Date],"ddd","en-US")),
+    #"Month No Added" = Table.AddColumn(#"Day Name Added", "Month No", each Date.Month([Date])),
+
+    #"Month Name Added" = Table.AddColumn(#"Month No Added", "Month Name", each Date.ToText([Date],"MMM","en-us")),
+
+    #"Quarter No Added" = Table.AddColumn(#"Month Name Added", "Quarter No", each Date.QuarterOfYear([Date])),
+
+    #"EUROPEAN Week No added" = Table.AddColumn(#"Quarter No Added", "WeekNo", each Text.PadStart(Number.ToText(Date.WeekOfYear([Date])+1),2,"0")),
+
+    #"Year Added" = Table.AddColumn(#"EUROPEAN Week No added", "Year", each Date.Year([Date])),
+
+    #"Year Month Added" = Table.AddColumn(#"Year Added", "Year-Month", each Number.ToText([Year])&"-"&[Month Name]),
+    #"Year Week Added" = Table.AddColumn(#"Year Month Added", "Year-Week", each Number.ToText([Year])&"-"&[WeekNo]),
+
+    #"Year Quarter Added" = Table.AddColumn(#"Year Week Added", "Year-Quarter", each Number.ToText([Year]) & "Q"& Number.ToText([Quarter No],"00")),
+
+    #"Change type to text" = Table.TransformColumnTypes(#"Year Quarter Added",{{"Year", Int64.Type}, {"Date", type date}, {"Month No", Int64.Type}, {"Day Name", type text}, {"Month Name", type text}, {"Quarter No", Int64.Type}, {"Year-Quarter", type text}, {"Year-Month", type text}, {"WeekNo", Int64.Type}, {"DayNo", type text}, {"Year-Week", type text}}),
+
+    #"Sort DayName" = Table.AddColumn(#"Change type to text", "SortDayName", each Date.DayOfWeek([Date],1)),
+
+    #"Sort YearMonth" = Table.AddColumn(#"Sort DayName", "SortYearMonth", each Number.ToText([Year])&Text.PadStart(Number.ToText([Month No]),2,"0")),
+    #"Sort YearWeek" = Table.AddColumn(#"Sort YearMonth", "Sort YearWeek", each Number.ToText([Year])&Text.PadStart(Number.ToText([WeekNo]),2,"0")),
+
+    #"Sort YearQuarter" = Table.AddColumn(#"Sort YearWeek", "SortYearQuarter", each Number.ToText([Year])&Text.PadStart(Number.ToText([Quarter No]),2,"0")),
+
+    #"Changed Type to NO" = Table.TransformColumnTypes(#"Sort YearQuarter",{{"SortYearMonth", Int64.Type}, {"SortYearQuarter", Int64.Type}, {"SortDayName", Int64.Type}, {"Sort YearWeek", Int64.Type}, {"Year-Week", type text}})
+in
+    #"Changed Type to NO"

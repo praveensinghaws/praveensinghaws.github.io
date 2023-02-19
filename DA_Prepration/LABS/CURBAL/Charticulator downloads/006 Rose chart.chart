@@ -1,0 +1,1188 @@
+{
+  "state": {
+    "version": "1.6.0",
+    "dataset": {
+      "name": "Charticulator #2 Radial bar chart-Sample data ",
+      "tables": [
+        {
+          "name": "Charticulator #2 Radial bar chart-Sample data ",
+          "displayName": "Charticulator #2 Radial bar chart-Sample data ",
+          "columns": [
+            {
+              "name": "Fire count",
+              "displayName": "Fire count",
+              "type": "number",
+              "metadata": {
+                "kind": "numerical"
+              }
+            },
+            {
+              "name": "state",
+              "displayName": "state",
+              "type": "string",
+              "metadata": {
+                "kind": "categorical",
+                "orderMode": "alphabetically"
+              }
+            },
+            {
+              "name": "year",
+              "displayName": "Radial Axis",
+              "type": "string",
+              "metadata": {
+                "unit": "__year",
+                "kind": "ordinal",
+                "orderMode": "alphabetically"
+              }
+            },
+            {
+              "name": "Fire K",
+              "displayName": "Bar Height",
+              "type": "number",
+              "metadata": {
+                "kind": "numerical"
+              }
+            }
+          ],
+          "rows": [
+            {
+              "_id": "0",
+              "Fire count": 6512,
+              "state": "AMAZONAS",
+              "year": "2013",
+              "Fire K": 6.5
+            },
+            {
+              "_id": "1",
+              "Fire count": 9008,
+              "state": "AMAZONAS",
+              "year": "2014",
+              "Fire K": 9
+            },
+            {
+              "_id": "2",
+              "Fire count": 11173,
+              "state": "AMAZONAS",
+              "year": "2016",
+              "Fire K": 11.2
+            },
+            {
+              "_id": "3",
+              "Fire count": 11446,
+              "state": "AMAZONAS",
+              "year": "2018",
+              "Fire K": 11.4
+            },
+            {
+              "_id": "4",
+              "Fire count": 11685,
+              "state": "AMAZONAS",
+              "year": "2017",
+              "Fire K": 11.7
+            },
+            {
+              "_id": "5",
+              "Fire count": 12665,
+              "state": "AMAZONAS",
+              "year": "2019",
+              "Fire K": 12.7
+            },
+            {
+              "_id": "6",
+              "Fire count": 13419,
+              "state": "AMAZONAS",
+              "year": "2015",
+              "Fire K": 13.4
+            }
+          ],
+          "type": "Main",
+          "localeNumberFormat": {
+            "remove": ",",
+            "decimal": "."
+          }
+        }
+      ]
+    },
+    "chart": {
+      "_id": "0gpfyqwlccav",
+      "classID": "chart.rectangle",
+      "properties": {
+        "name": "Chart",
+        "backgroundColor": null,
+        "backgroundOpacity": 1,
+        "exposed": true
+      },
+      "mappings": {
+        "marginTop": {
+          "type": "value",
+          "value": 80
+        },
+        "width": {
+          "type": "value",
+          "value": 670.0393427739818
+        },
+        "height": {
+          "type": "value",
+          "value": 600
+        }
+      },
+      "glyphs": [
+        {
+          "_id": "66sltu0ht6h",
+          "classID": "glyph.rectangle",
+          "properties": {
+            "name": "Glyph"
+          },
+          "table": "Charticulator #2 Radial bar chart-Sample data ",
+          "marks": [
+            {
+              "_id": "lbreyvnld9m",
+              "classID": "mark.anchor",
+              "properties": {
+                "name": "Anchor"
+              },
+              "mappings": {
+                "x": {
+                  "type": "parent",
+                  "parentAttribute": "icx"
+                },
+                "y": {
+                  "type": "parent",
+                  "parentAttribute": "icy"
+                }
+              }
+            },
+            {
+              "_id": "aiqqa9on68",
+              "classID": "mark.rect",
+              "properties": {
+                "visible": true,
+                "strokeStyle": "solid",
+                "shape": "rectangle",
+                "name": "Shape",
+                "exposed": true
+              },
+              "mappings": {
+                "fill": {
+                  "type": "scale",
+                  "table": "Charticulator #2 Radial bar chart-Sample data ",
+                  "expression": "first(year)",
+                  "valueType": "string",
+                  "scale": "3mz7ofmk59u",
+                  "attribute": "fill"
+                },
+                "strokeWidth": {
+                  "type": "value",
+                  "value": 1
+                },
+                "opacity": {
+                  "type": "value",
+                  "value": 1
+                },
+                "visible": {
+                  "type": "value",
+                  "value": true
+                },
+                "x1": {
+                  "type": "parent",
+                  "parentAttribute": "ix1"
+                },
+                "y1": {
+                  "type": "parent",
+                  "parentAttribute": "iy1"
+                },
+                "x2": {
+                  "type": "parent",
+                  "parentAttribute": "ix2"
+                },
+                "y2": {
+                  "type": "parent",
+                  "parentAttribute": "iy2"
+                },
+                "height": {
+                  "type": "scale",
+                  "table": "Charticulator #2 Radial bar chart-Sample data ",
+                  "expression": "avg(`Fire K`)",
+                  "valueType": "number",
+                  "scale": "ss2th9lelnq",
+                  "attribute": "height"
+                }
+              }
+            },
+            {
+              "_id": "sh4h422t9jp",
+              "classID": "mark.text",
+              "properties": {
+                "alignment": {
+                  "x": "middle",
+                  "y": "top",
+                  "xMargin": 5,
+                  "yMargin": 5
+                },
+                "rotation": 0,
+                "visible": true,
+                "name": "Shape Label",
+                "exposed": true
+              },
+              "mappings": {
+                "text": {
+                  "type": "text",
+                  "table": "Charticulator #2 Radial bar chart-Sample data ",
+                  "textExpression": "${avg(`Fire K`)}{.1f}K"
+                },
+                "fontFamily": {
+                  "type": "value",
+                  "value": "Arial"
+                },
+                "fontSize": {
+                  "type": "value",
+                  "value": 16
+                },
+                "opacity": {
+                  "type": "value",
+                  "value": 1
+                },
+                "visible": {
+                  "type": "value",
+                  "value": true
+                },
+                "x": {
+                  "type": "parent",
+                  "parentAttribute": "icx"
+                },
+                "y": {
+                  "type": "parent",
+                  "parentAttribute": "iy2"
+                },
+                "color": {
+                  "type": "value",
+                  "value": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  }
+                }
+              }
+            },
+            {
+              "_id": "b3gkifui1kl",
+              "classID": "mark.text",
+              "properties": {
+                "alignment": {
+                  "x": "middle",
+                  "y": "bottom",
+                  "xMargin": 5,
+                  "yMargin": 10.736972218545764
+                },
+                "rotation": 0,
+                "visible": true,
+                "name": "Axis Label",
+                "exposed": true
+              },
+              "mappings": {
+                "text": {
+                  "type": "text",
+                  "table": "Charticulator #2 Radial bar chart-Sample data ",
+                  "textExpression": "${first(year)}"
+                },
+                "fontFamily": {
+                  "type": "value",
+                  "value": "Arial"
+                },
+                "fontSize": {
+                  "type": "value",
+                  "value": 14
+                },
+                "color": {
+                  "type": "value",
+                  "value": {
+                    "r": 241,
+                    "g": 105,
+                    "b": 19
+                  }
+                },
+                "opacity": {
+                  "type": "value",
+                  "value": 1
+                },
+                "visible": {
+                  "type": "value",
+                  "value": true
+                },
+                "x": {
+                  "type": "parent",
+                  "parentAttribute": "icx"
+                },
+                "y": {
+                  "type": "parent",
+                  "parentAttribute": "iy2"
+                }
+              }
+            }
+          ],
+          "mappings": {},
+          "constraints": []
+        }
+      ],
+      "elements": [
+        {
+          "_id": "jkn6mff62ac",
+          "classID": "plot-segment.polar",
+          "glyph": "66sltu0ht6h",
+          "table": "Charticulator #2 Radial bar chart-Sample data ",
+          "filter": null,
+          "mappings": {
+            "x1": {
+              "type": "parent",
+              "parentAttribute": "x1"
+            },
+            "y1": {
+              "type": "parent",
+              "parentAttribute": "y1"
+            }
+          },
+          "properties": {
+            "name": "Radial Axis",
+            "visible": true,
+            "sublayout": {
+              "type": "dodge-x",
+              "order": null,
+              "ratioX": 0.1,
+              "ratioY": 0.1,
+              "align": {
+                "x": "start",
+                "y": "start"
+              },
+              "grid": {
+                "direction": "x",
+                "xCount": null,
+                "yCount": null
+              },
+              "packing": {
+                "gravityX": 0.1,
+                "gravityY": 0.1
+              }
+            },
+            "xData": {
+              "type": "categorical",
+              "expression": "first(year)",
+              "valueType": "string",
+              "gapRatio": 0.1,
+              "visible": false,
+              "side": "default",
+              "style": {
+                "tickColor": {
+                  "r": 241,
+                  "g": 105,
+                  "b": 19
+                },
+                "lineColor": {
+                  "r": 241,
+                  "g": 105,
+                  "b": 19
+                },
+                "fontFamily": "Arial",
+                "fontSize": 16,
+                "tickSize": 5
+              },
+              "categories": [
+                "2013",
+                "2014",
+                "2015",
+                "2016",
+                "2017",
+                "2018",
+                "2019"
+              ]
+            },
+            "marginX1": 0,
+            "marginY1": 0,
+            "marginX2": 0,
+            "marginY2": 0,
+            "startAngle": 0,
+            "endAngle": 360,
+            "innerRatio": 0,
+            "outerRatio": 1,
+            "curve": [
+              [
+                {
+                  "x": -1,
+                  "y": 0
+                },
+                {
+                  "x": -0.25,
+                  "y": -0.5
+                },
+                {
+                  "x": 0.25,
+                  "y": 0.5
+                },
+                {
+                  "x": 1,
+                  "y": 0
+                }
+              ]
+            ],
+            "normalStart": -0.2,
+            "normalEnd": 0.2,
+            "equalizeArea": false,
+            "xDataDisableAutoMax": false,
+            "xDataDisableAutoMin": false,
+            "exposed": true
+          }
+        }
+      ],
+      "scales": [
+        {
+          "_id": "ss2th9lelnq",
+          "classID": "scale.linear<number,number>",
+          "properties": {
+            "name": "Scale1",
+            "domainMin": 0,
+            "domainMax": 13.5,
+            "disableAutoMax": false,
+            "disableAutoMin": false,
+            "exposed": true
+          },
+          "mappings": {
+            "rangeMin": {
+              "type": "value",
+              "value": 0
+            }
+          },
+          "inputType": "number",
+          "outputType": "number"
+        },
+        {
+          "_id": "3mz7ofmk59u",
+          "classID": "scale.categorical<string,color>",
+          "properties": {
+            "name": "Scale2",
+            "mapping": {
+              "2013": {
+                "r": 115,
+                "g": 115,
+                "b": 115
+              },
+              "2014": {
+                "r": 115,
+                "g": 115,
+                "b": 115
+              },
+              "2015": {
+                "r": 115,
+                "g": 115,
+                "b": 115
+              },
+              "2016": {
+                "r": 115,
+                "g": 115,
+                "b": 115
+              },
+              "2017": {
+                "r": 115,
+                "g": 115,
+                "b": 115
+              },
+              "2018": {
+                "r": 115,
+                "g": 115,
+                "b": 115
+              },
+              "2019": {
+                "r": 241,
+                "g": 105,
+                "b": 19
+              }
+            },
+            "disableAutoMax": false,
+            "disableAutoMin": false
+          },
+          "mappings": {},
+          "inputType": "string",
+          "outputType": "color"
+        }
+      ],
+      "scaleMappings": [
+        {
+          "type": "scale",
+          "table": "Charticulator #2 Radial bar chart-Sample data ",
+          "expression": "avg(`Fire K`)",
+          "valueType": "number",
+          "scale": "ss2th9lelnq",
+          "attribute": "height"
+        },
+        {
+          "type": "scale",
+          "table": "Charticulator #2 Radial bar chart-Sample data ",
+          "expression": "first(year)",
+          "valueType": "string",
+          "scale": "3mz7ofmk59u",
+          "attribute": "fill"
+        }
+      ],
+      "constraints": [],
+      "resources": []
+    },
+    "chartState": {
+      "elements": [
+        {
+          "attributes": {
+            "angle1": 0,
+            "angle2": 360,
+            "radial1": 0,
+            "radial2": 256.374548267803,
+            "x1": -285.0196713869909,
+            "x2": 305.65716626624896,
+            "y1": -250,
+            "y2": 262.74909653560593,
+            "x": -100,
+            "y": 100,
+            "gapX": 4,
+            "gapY": 4
+          },
+          "dataRowIndices": [
+            [
+              0
+            ],
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ],
+            [
+              4
+            ],
+            [
+              5
+            ],
+            [
+              6
+            ]
+          ],
+          "glyphs": [
+            {
+              "marks": [
+                {
+                  "attributes": {
+                    "x": 0,
+                    "y": 0
+                  }
+                },
+                {
+                  "attributes": {
+                    "x1": -23.14285714285714,
+                    "y1": -62.18039418613581,
+                    "x2": 23.14285714285714,
+                    "y2": 62.18039418613581,
+                    "cx": 0,
+                    "cy": 0,
+                    "width": 46.28571428571428,
+                    "height": 124.36078837227161,
+                    "stroke": null,
+                    "fill": {
+                      "r": 115,
+                      "g": 115,
+                      "b": 115
+                    },
+                    "strokeWidth": 1,
+                    "opacity": 1,
+                    "visible": true
+                  }
+                },
+                {
+                  "attributes": {
+                    "x": 0,
+                    "y": 62.18039418613581,
+                    "text": "6.5K",
+                    "fontFamily": "Arial",
+                    "fontSize": 16,
+                    "color": {
+                      "r": 255,
+                      "g": 255,
+                      "b": 255
+                    },
+                    "visible": true,
+                    "outline": null,
+                    "opacity": 1
+                  }
+                },
+                {
+                  "attributes": {
+                    "x": 0,
+                    "y": 62.18039418613581,
+                    "text": "2013",
+                    "fontFamily": "Arial",
+                    "fontSize": 14,
+                    "color": {
+                      "r": 241,
+                      "g": 105,
+                      "b": 19
+                    },
+                    "visible": true,
+                    "outline": null,
+                    "opacity": 1
+                  }
+                }
+              ],
+              "attributes": {
+                "x": 25.71428571428571,
+                "y": 62.18039418613581,
+                "width": 46.28571428571428,
+                "height": 124.36078837227161,
+                "x1": 2.5714285714285716,
+                "y1": 0,
+                "x2": 48.85714285714285,
+                "y2": 124.36078837227161,
+                "ix1": -23.14285714285714,
+                "iy1": -62.18039418613581,
+                "ix2": 23.14285714285714,
+                "iy2": 62.18039418613581,
+                "icx": 0,
+                "icy": 0
+              }
+            },
+            {
+              "marks": [
+                {
+                  "attributes": {
+                    "x": 0,
+                    "y": 0
+                  }
+                },
+                {
+                  "attributes": {
+                    "x1": -23.14285714285714,
+                    "y1": -86.09593041157265,
+                    "x2": 23.14285714285714,
+                    "y2": 86.09593041157265,
+                    "cx": 0,
+                    "cy": 0,
+                    "width": 46.28571428571428,
+                    "height": 172.1918608231453,
+                    "stroke": null,
+                    "fill": {
+                      "r": 115,
+                      "g": 115,
+                      "b": 115
+                    },
+                    "strokeWidth": 1,
+                    "opacity": 1,
+                    "visible": true
+                  }
+                },
+                {
+                  "attributes": {
+                    "x": 0,
+                    "y": 86.09593041157265,
+                    "text": "9.0K",
+                    "fontFamily": "Arial",
+                    "fontSize": 16,
+                    "color": {
+                      "r": 255,
+                      "g": 255,
+                      "b": 255
+                    },
+                    "visible": true,
+                    "outline": null,
+                    "opacity": 1
+                  }
+                },
+                {
+                  "attributes": {
+                    "x": 0,
+                    "y": 86.09593041157265,
+                    "text": "2014",
+                    "fontFamily": "Arial",
+                    "fontSize": 14,
+                    "color": {
+                      "r": 241,
+                      "g": 105,
+                      "b": 19
+                    },
+                    "visible": true,
+                    "outline": null,
+                    "opacity": 1
+                  }
+                }
+              ],
+              "attributes": {
+                "x": 77.14285714285714,
+                "y": 86.09593041157265,
+                "width": 46.28571428571428,
+                "height": 172.1918608231453,
+                "x1": 54.00000000000001,
+                "y1": 0,
+                "x2": 100.28571428571428,
+                "y2": 172.1918608231453,
+                "ix1": -23.14285714285714,
+                "iy1": -86.09593041157265,
+                "ix2": 23.14285714285714,
+                "iy2": 86.09593041157265,
+                "icx": 0,
+                "icy": 0
+              }
+            },
+            {
+              "marks": [
+                {
+                  "attributes": {
+                    "x": 0,
+                    "y": 0
+                  }
+                },
+                {
+                  "attributes": {
+                    "x1": -23.14285714285714,
+                    "y1": -107.14160228995709,
+                    "x2": 23.14285714285714,
+                    "y2": 107.14160228995709,
+                    "cx": 0,
+                    "cy": 0,
+                    "width": 46.28571428571428,
+                    "height": 214.28320457991418,
+                    "stroke": null,
+                    "fill": {
+                      "r": 115,
+                      "g": 115,
+                      "b": 115
+                    },
+                    "strokeWidth": 1,
+                    "opacity": 1,
+                    "visible": true
+                  }
+                },
+                {
+                  "attributes": {
+                    "x": 0,
+                    "y": 107.14160228995709,
+                    "text": "11.2K",
+                    "fontFamily": "Arial",
+                    "fontSize": 16,
+                    "color": {
+                      "r": 255,
+                      "g": 255,
+                      "b": 255
+                    },
+                    "visible": true,
+                    "outline": null,
+                    "opacity": 1
+                  }
+                },
+                {
+                  "attributes": {
+                    "x": 0,
+                    "y": 107.14160228995709,
+                    "text": "2016",
+                    "fontFamily": "Arial",
+                    "fontSize": 14,
+                    "color": {
+                      "r": 241,
+                      "g": 105,
+                      "b": 19
+                    },
+                    "visible": true,
+                    "outline": null,
+                    "opacity": 1
+                  }
+                }
+              ],
+              "attributes": {
+                "x": 180,
+                "y": 107.14160228995709,
+                "width": 46.28571428571428,
+                "height": 214.28320457991418,
+                "x1": 156.85714285714286,
+                "y1": 0,
+                "x2": 203.14285714285714,
+                "y2": 214.28320457991418,
+                "ix1": -23.14285714285714,
+                "iy1": -107.14160228995709,
+                "ix2": 23.14285714285714,
+                "iy2": 107.14160228995709,
+                "icx": 0,
+                "icy": 0
+              }
+            },
+            {
+              "marks": [
+                {
+                  "attributes": {
+                    "x": 0,
+                    "y": 0
+                  }
+                },
+                {
+                  "attributes": {
+                    "x1": -23.14285714285714,
+                    "y1": -109.05484518799204,
+                    "x2": 23.14285714285714,
+                    "y2": 109.05484518799204,
+                    "cx": 0,
+                    "cy": 0,
+                    "width": 46.28571428571428,
+                    "height": 218.1096903759841,
+                    "stroke": null,
+                    "fill": {
+                      "r": 115,
+                      "g": 115,
+                      "b": 115
+                    },
+                    "strokeWidth": 1,
+                    "opacity": 1,
+                    "visible": true
+                  }
+                },
+                {
+                  "attributes": {
+                    "x": 0,
+                    "y": 109.05484518799204,
+                    "text": "11.4K",
+                    "fontFamily": "Arial",
+                    "fontSize": 16,
+                    "color": {
+                      "r": 255,
+                      "g": 255,
+                      "b": 255
+                    },
+                    "visible": true,
+                    "outline": null,
+                    "opacity": 1
+                  }
+                },
+                {
+                  "attributes": {
+                    "x": 0,
+                    "y": 109.05484518799204,
+                    "text": "2018",
+                    "fontFamily": "Arial",
+                    "fontSize": 14,
+                    "color": {
+                      "r": 241,
+                      "g": 105,
+                      "b": 19
+                    },
+                    "visible": true,
+                    "outline": null,
+                    "opacity": 1
+                  }
+                }
+              ],
+              "attributes": {
+                "x": 282.8571428571429,
+                "y": 109.05484518799204,
+                "width": 46.28571428571428,
+                "height": 218.1096903759841,
+                "x1": 259.7142857142858,
+                "y1": 0,
+                "x2": 306.00000000000006,
+                "y2": 218.1096903759841,
+                "ix1": -23.14285714285714,
+                "iy1": -109.05484518799204,
+                "ix2": 23.14285714285714,
+                "iy2": 109.05484518799204,
+                "icx": 0,
+                "icy": 0
+              }
+            },
+            {
+              "marks": [
+                {
+                  "attributes": {
+                    "x": 0,
+                    "y": 0
+                  }
+                },
+                {
+                  "attributes": {
+                    "x1": -23.14285714285714,
+                    "y1": -111.92470953504446,
+                    "x2": 23.14285714285714,
+                    "y2": 111.92470953504446,
+                    "cx": 0,
+                    "cy": 0,
+                    "width": 46.28571428571428,
+                    "height": 223.8494190700889,
+                    "stroke": null,
+                    "fill": {
+                      "r": 115,
+                      "g": 115,
+                      "b": 115
+                    },
+                    "strokeWidth": 1,
+                    "opacity": 1,
+                    "visible": true
+                  }
+                },
+                {
+                  "attributes": {
+                    "x": 0,
+                    "y": 111.92470953504446,
+                    "text": "11.7K",
+                    "fontFamily": "Arial",
+                    "fontSize": 16,
+                    "color": {
+                      "r": 255,
+                      "g": 255,
+                      "b": 255
+                    },
+                    "visible": true,
+                    "outline": null,
+                    "opacity": 1
+                  }
+                },
+                {
+                  "attributes": {
+                    "x": 0,
+                    "y": 111.92470953504446,
+                    "text": "2017",
+                    "fontFamily": "Arial",
+                    "fontSize": 14,
+                    "color": {
+                      "r": 241,
+                      "g": 105,
+                      "b": 19
+                    },
+                    "visible": true,
+                    "outline": null,
+                    "opacity": 1
+                  }
+                }
+              ],
+              "attributes": {
+                "x": 231.42857142857144,
+                "y": 111.92470953504446,
+                "width": 46.28571428571428,
+                "height": 223.8494190700889,
+                "x1": 208.2857142857143,
+                "y1": 0,
+                "x2": 254.57142857142858,
+                "y2": 223.8494190700889,
+                "ix1": -23.14285714285714,
+                "iy1": -111.92470953504446,
+                "ix2": 23.14285714285714,
+                "iy2": 111.92470953504446,
+                "icx": 0,
+                "icy": 0
+              }
+            },
+            {
+              "marks": [
+                {
+                  "attributes": {
+                    "x": 0,
+                    "y": 0
+                  }
+                },
+                {
+                  "attributes": {
+                    "x1": -23.14285714285714,
+                    "y1": -121.49092402521919,
+                    "x2": 23.14285714285714,
+                    "y2": 121.49092402521919,
+                    "cx": 0,
+                    "cy": 0,
+                    "width": 46.28571428571428,
+                    "height": 242.98184805043837,
+                    "stroke": null,
+                    "fill": {
+                      "r": 241,
+                      "g": 105,
+                      "b": 19
+                    },
+                    "strokeWidth": 1,
+                    "opacity": 1,
+                    "visible": true
+                  }
+                },
+                {
+                  "attributes": {
+                    "x": 0,
+                    "y": 121.49092402521919,
+                    "text": "12.7K",
+                    "fontFamily": "Arial",
+                    "fontSize": 16,
+                    "color": {
+                      "r": 255,
+                      "g": 255,
+                      "b": 255
+                    },
+                    "visible": true,
+                    "outline": null,
+                    "opacity": 1
+                  }
+                },
+                {
+                  "attributes": {
+                    "x": 0,
+                    "y": 121.49092402521919,
+                    "text": "2019",
+                    "fontFamily": "Arial",
+                    "fontSize": 14,
+                    "color": {
+                      "r": 241,
+                      "g": 105,
+                      "b": 19
+                    },
+                    "visible": true,
+                    "outline": null,
+                    "opacity": 1
+                  }
+                }
+              ],
+              "attributes": {
+                "x": 334.28571428571433,
+                "y": 121.49092402521919,
+                "width": 46.28571428571428,
+                "height": 242.98184805043837,
+                "x1": 311.14285714285717,
+                "y1": 0,
+                "x2": 357.42857142857144,
+                "y2": 242.98184805043837,
+                "ix1": -23.14285714285714,
+                "iy1": -121.49092402521919,
+                "ix2": 23.14285714285714,
+                "iy2": 121.49092402521919,
+                "icx": 0,
+                "icy": 0
+              }
+            },
+            {
+              "marks": [
+                {
+                  "attributes": {
+                    "x": 0,
+                    "y": 0
+                  }
+                },
+                {
+                  "attributes": {
+                    "x1": -23.14285714285714,
+                    "y1": -128.18727416834153,
+                    "x2": 23.14285714285714,
+                    "y2": 128.18727416834153,
+                    "cx": 0,
+                    "cy": 0,
+                    "width": 46.28571428571428,
+                    "height": 256.37454833668306,
+                    "stroke": null,
+                    "fill": {
+                      "r": 115,
+                      "g": 115,
+                      "b": 115
+                    },
+                    "strokeWidth": 1,
+                    "opacity": 1,
+                    "visible": true
+                  }
+                },
+                {
+                  "attributes": {
+                    "x": 0,
+                    "y": 128.18727416834153,
+                    "text": "13.4K",
+                    "fontFamily": "Arial",
+                    "fontSize": 16,
+                    "color": {
+                      "r": 255,
+                      "g": 255,
+                      "b": 255
+                    },
+                    "visible": true,
+                    "outline": null,
+                    "opacity": 1
+                  }
+                },
+                {
+                  "attributes": {
+                    "x": 0,
+                    "y": 128.18727416834153,
+                    "text": "2015",
+                    "fontFamily": "Arial",
+                    "fontSize": 14,
+                    "color": {
+                      "r": 241,
+                      "g": 105,
+                      "b": 19
+                    },
+                    "visible": true,
+                    "outline": null,
+                    "opacity": 1
+                  }
+                }
+              ],
+              "attributes": {
+                "x": 128.57142857142856,
+                "y": 128.18727416834153,
+                "width": 46.28571428571428,
+                "height": 256.37454833668306,
+                "x1": 105.42857142857143,
+                "y1": 0,
+                "x2": 151.71428571428572,
+                "y2": 256.37454833668306,
+                "ix1": -23.14285714285714,
+                "iy1": -128.18727416834153,
+                "ix2": 23.14285714285714,
+                "iy2": 128.18727416834153,
+                "icx": 0,
+                "icy": 0
+              }
+            }
+          ]
+        }
+      ],
+      "scales": [
+        {
+          "attributes": {
+            "rangeMin": 0,
+            "rangeMax": 258.287791234718
+          }
+        },
+        {
+          "attributes": {}
+        }
+      ],
+      "scaleMappings": [
+        {
+          "type": "scale",
+          "table": "Charticulator #2 Radial bar chart-Sample data ",
+          "expression": "avg(`Fire K`)",
+          "valueType": "number",
+          "scale": "ss2th9lelnq",
+          "attribute": "height"
+        },
+        {
+          "type": "scale",
+          "table": "Charticulator #2 Radial bar chart-Sample data ",
+          "expression": "first(year)",
+          "valueType": "string",
+          "scale": "3mz7ofmk59u",
+          "attribute": "fill"
+        }
+      ],
+      "attributes": {
+        "width": 670.0393427739818,
+        "height": 600,
+        "marginLeft": 50,
+        "marginRight": 50,
+        "marginTop": 80,
+        "marginBottom": 50,
+        "cx": 0,
+        "cy": -15,
+        "x1": -285.0196713869909,
+        "y1": -250,
+        "x2": 285.0196713869909,
+        "y2": 220,
+        "ox1": -335.0196713869909,
+        "oy1": -300,
+        "ox2": 335.0196713869909,
+        "oy2": 300
+      }
+    }
+  },
+  "name": "Charticulator #2 Radial bar chart-Sample data"
+}
